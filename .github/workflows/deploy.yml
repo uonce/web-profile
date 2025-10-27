@@ -22,6 +22,6 @@ jobs:
               
               deploy-message: "${{ github.event.head_commit.message }}"
               # 깃허브 커밋 메시지를 Netlify 배포 메시지로 사용합니다.
-              
+           env:
               netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
               netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
