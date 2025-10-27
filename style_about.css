@@ -1,0 +1,158 @@
+body {
+    font-family: 'Pretendard';
+    font-weight: 700; 
+    line-height: 1.6; /* 기본 줄 간격 추가 (가독성 향상) */
+    background-color: #ffffff; 
+    color: #333; 
+    margin: 0;
+
+    min-height: 100vh; /* 화면 전체 높이를 최소 높이로 설정 */
+}
+
+/* 페이지 전체를 감싸는 컨테이너 */
+.about-page-container {
+    max-width: 850px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 'Home' 돌아가기 네비게이션 */
+.page-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.page-nav-inner {
+    max-width: 900px; /* 콘텐츠 너비와 동일하게 */
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.page-nav-inner a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.page-nav-inner a:hover {
+    color: #000;
+}
+
+/* "ABOUT ME" 메인 제목 */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+
+        /* 고정 헤더(.page-nav)가 콘텐츠를 가리지 않도록 */
+    padding: 100px 20px 40px 20px; 
+}
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.title-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #ed3a3a;
+    margin: 0 auto;
+}
+
+/* 3단 그리드 레이아웃 (Flexbox) */
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* 3단 그리드 - 각 열의 비율 */
+.about-left {
+    flex: 1; /* 1.2의 비율 */
+}
+.about-right {
+    flex: 1; /* 0.8의 비율 */
+    text-align: center;
+}
+
+/* 3-1. 좌/우측 열 공통 텍스트 스타일 */
+.about-left h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.about-left p {
+    font-size: 1rem;
+    line-height: 1.7; /* 본문 단락은 줄 간격을 더 넓게 */
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* 3-2. 연락처 정보 (왼쪽 열) */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #555;
+}
+.contact-info i {
+    font-size: 1.1rem;
+    color: #d54c34; /* 아이콘 파란색 */
+    width: 24px; /* 아이콘 너비 고정으로 텍스트 정렬 맞춤 */
+    margin-right: 10px;
+}
+
+/* 3-3. 프로필 이미지 (가운데 열) */
+.about-profile-image {
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #f0f0f0; /* 옅은 테두리 */
+}
+
+/* 페이지 로드 시 등장 효과 (아래에서 위로 + 투명도) */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(40px);
+    }
+}
+
+/* 애니메이션 적용 클래스 */
+.fade-in-on-load {
+    animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+.fade-in-profile-on-load {
+    animation: fadeInSlideRight 1s ease-out forwards;
+}

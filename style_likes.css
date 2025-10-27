@@ -1,0 +1,119 @@
+body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400; 
+    line-height: 1.6;
+    background-color: #ffffff; 
+    color: #333; 
+    margin: 0;
+}
+
+   /* 2. 고정 헤더 (Home) */
+
+.page-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.page-nav-inner {
+    max-width: 900px; /* 콘텐츠 너비와 동일하게 */
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.page-nav-inner a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.page-nav-inner a:hover {
+    color: #000;
+}
+
+/* 콘텐츠 전체 컨테이너 */
+.likes-container {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    /* 고정 헤더(.page-nav)가 콘텐츠를 가리지 않도록 */
+    padding: 100px 20px 40px 20px; 
+}
+
+/* "Likes" 메인 제목 */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 그라데이션 텍스트 */
+.gradient-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    
+    /* 1. 텍스트에 그라데이션 적용 */
+    background: linear-gradient(90deg, #e34414, #ff5b2e);
+    
+    /* 2. 그라데이션을 텍스트 모양대로 잘라냄 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* 3. 텍스트 색상을 투명하게 만듦 (배경 그라데이션이 보이도록) */
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* 갤러리 그리드 */
+.gallery-grid {
+    display: grid;
+    
+    /* 1fr: 사용 가능한 공간을 1의 비율로 채움
+       -> 3개의 열이 동일한 너비를 가짐 */
+    grid-template-columns: repeat(3, 1fr);
+    
+    gap: 12px; /* 이미지 사이의 간격 */
+}
+
+.gallery-item {
+    width: 100%;
+    
+    /* 이미지 비율을 1:1 정도로 유지 (선택 사항) */
+    aspect-ratio: 1 / 1; 
+    
+    border-radius: 8px; /* 이미지 모서리 둥글게 */
+    overflow: hidden; /* 둥근 모서리 적용 */
+
+    /* 1. 초기 상태: 투명하고 살짝 아래에 */
+    opacity: 0;
+    transform: translateY(10px);
+    
+    /* 2. 전환 효과: 1초 동안 부드럽게 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* [신규] 3. 최종 상태: JS가 .visible 클래스를 추가하면 보임 */
+.gallery-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    
+    /* 이미지가 찌그러지지 않고 영역을 꽉 채우도록 */
+    object-fit: cover; 
+    
+    /* 부드러운 전환 효과 */
+    transition: transform 0.3s ease-out;
+}
+
+/* 이미지에 마우스 올리면 살짝 확대 */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
