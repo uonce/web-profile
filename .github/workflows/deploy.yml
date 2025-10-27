@@ -22,6 +22,7 @@ jobs:
           # 만약 위에서 'npm run build'를 했다면 'dist' 또는 'build' 폴더입니다
           deploy-message: "${{ github.event.head_commit.message }}"
           # 깃허브 커밋 메시지를 Netlify 배포 메시지로 사용합니다.
+          production-deploy: true              # <- 이게 없으면 preview만 배포됨 (중요)
         
         env:
           # (O) 'env:' 블록은 'with:'와 같은 레벨에서 새로 시작합니다.
