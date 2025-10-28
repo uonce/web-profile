@@ -12,5 +12,5 @@ with style_likes.css, likes.js <br>
 
 <br><br>
 <p>
-  how to : <a href="https://once-storage.tistory.com/10" alt="○의 정보창고"></a>
+  detail : https://once-storage.tistory.com/10
 </p>
