@@ -10,4 +10,7 @@ with style_about.css <br>
 with style_likes.css, likes.js <br>
 ![rec2](https://github.com/user-attachments/assets/6f26e298-fa85-4ac0-871e-7082fb9abaa2)
 
-
+<br><br>
+<p>
+  how to : <a href="https://once-storage.tistory.com/10" alt="○의 정보창고"></a>
+</p>
