@@ -4,10 +4,10 @@ with style.css
 
 ### About me (about.html)
 with style_about.css
-![rec](https://github.com/user-attachments/assets/b771bedb-761e-4b90-aa45-93436e3a9e95)
+<div>![rec](https://github.com/user-attachments/assets/b771bedb-761e-4b90-aa45-93436e3a9e95)</div>
 
 ### Likes (likes.html)
 with style_likes.css, likes.js
-![rec2](https://github.com/user-attachments/assets/6f26e298-fa85-4ac0-871e-7082fb9abaa2)
+<div>![rec2](https://github.com/user-attachments/assets/6f26e298-fa85-4ac0-871e-7082fb9abaa2)</div>
 
 
